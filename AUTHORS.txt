@@ -1,0 +1,4 @@
+Authors ordered by first contribution.
+
+Kris Borchers <kris.borchers@gmail.com>
+Scott González <scott.gonzalez@gmail.com>
