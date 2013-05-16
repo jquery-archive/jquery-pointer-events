@@ -1,4 +1,13 @@
+/*!
+ * jQuery Pointer Events v@VERSION
+ * https://github.com/jquery/jquery-pointer-events
+ *
+ * Copyright 2013 jQuery Foundation, Inc. and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ */
 (function( $ ) {
+
 var eventName, lastTouch,
 	POINTER_TYPE_UNAVAILABLE = "",
 	POINTER_TYPE_TOUCH = "touch",
@@ -135,4 +144,5 @@ function createSpecialEvent( eventName ) {
 for ( eventName in eventMap ) {
 	createSpecialEvent( eventName );
 }
+
 })( jQuery );
