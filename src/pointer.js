@@ -17,19 +17,18 @@ if ( !Object.keys ) {
 	}
 }
 
-PointerEventsPolyfill = {
-	external: {
-		contains: $.contains,
-		addEvent: function( target, eventName ) {
-			$( target ).on( eventName, this.boundHandler );
-		},
-		removeEvent: function( target, eventName ) {
-			$( target ).off( eventName, this.boundHandler );
-		},
-		dispatchEvent: function( event ) {
-			var target = this.getTarget( event );
-			$( target ).trigger( event );
-		}
+window.PointerEventsPolyfill = window.PointerEventsPolyfill || {};
+window.PointerEventsPolyfill.external = {
+	contains: $.contains,
+	addEvent: function( target, eventName ) {
+		$( target ).on( eventName, this.boundHandler );
+	},
+	removeEvent: function( target, eventName ) {
+		$( target ).off( eventName, this.boundHandler );
+	},
+	dispatchEvent: function( event ) {
+		var target = this.getTarget( event );
+		$( target ).trigger( event );
 	}
 };
 
