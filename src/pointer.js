@@ -9,12 +9,12 @@
 (function( $ ) {
 
 if ( !Object.keys ) {
-	function PointerEvent( type, event ) {
+	window.PointerEvent = function( type, event ) {
 		event.type = type;
 		var nevent = $.Event( event );
 		$.extend( nevent, event );
 		return nevent;
-	}
+	};
 }
 
 window.PointerEventsPolyfill = window.PointerEventsPolyfill || {};
